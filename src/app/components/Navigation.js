@@ -8,11 +8,11 @@ export default function Navigation(){
             path: "/",
         },
         {
-            name: "Drag and drop",
+            name: "Drag and drop (arrastrar y soltar)",
             path: "/drag-and-drop",
         },
         {
-            name: "Forms",
+            name: "Forms (pendiente)",
             path: "/forms",
         }
     ];
@@ -33,6 +33,8 @@ export default function Navigation(){
               )) }
             </ul>
             </nav>
+            <p> Desarrollo de funcionalidades para su posterior uso. Desarrollado por Alexandra Acevedo / Saul Lopez </p>
+            <a href="https://github.com/saullope/my-gamification-app.git" target="_blank" >Enlace al repositorio de GitHub</a>
         </div>
     );
 }
