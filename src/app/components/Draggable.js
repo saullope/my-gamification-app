@@ -1,14 +1,14 @@
-import {useDraggable} from '@dnd-kit/core';
+import { useDraggable } from '@dnd-kit/core';
 
 export default function Draggable(props) {
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
     id: 'draggable',
   });
+  
   const style = transform ? {
     transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-  } : undefined;
-
-  
+  } : undefined
+ 
   return (
     <button ref={setNodeRef} style={style} className='card border-primary mb-3' {...listeners} {...attributes}>
       {props.children}

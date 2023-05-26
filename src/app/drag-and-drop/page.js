@@ -29,19 +29,26 @@ export default function DragAndDrop() {
         {" "}
         <p className="display-6">Drag and Drop (Arrastrar y soltar)</p>{" "}
       </div>
-      <div>
-        {animals.map((animal, index) => (
+      <div className="container text-center">
+        <div className="row">
+          <div className="col">
+          {animals.map((animal) => (
           <DndContext>
-            <Draggable key={index}>
+            <Draggable key={animal.name}>
               {animal.animal}
               {animal.name}
-              {index}
             </Draggable>
           </DndContext> 
         ))}
+        </div>
+        <div className="col">
         <Droppable>
             { 'Drop here!' }
         </Droppable>
+        </div>
+        </div>
+      </div>
+      <div>
       </div>
     </div>
   );

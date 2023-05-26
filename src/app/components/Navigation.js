@@ -5,15 +5,19 @@ export default function Navigation(){
     const routes = [
         {
             name: "Home",
-            path: "/",
+            path: "/"
         },
         {
             name: "Drag and drop (arrastrar y soltar)",
-            path: "/drag-and-drop",
+            path: "/drag-and-drop"
         },
         {
-            name: "Forms (pendiente)",
-            path: "/forms",
+            name: "Generacion de formularios dinamicos (pendiente)",
+            path: "/forms"
+        },
+        {
+            name: "Consumiendo api rest (en progreso)",
+            path: "/api-rest"
         }
     ];
 
@@ -24,8 +28,8 @@ export default function Navigation(){
             </p>
             <nav>
             <ul>
-              { routes.map((route) => (
-                <li className="link-opacity-100" key={route.path} >
+              { routes.map((route, index) => (
+                <li className="link-opacity-100" key={index} >
                     <Link href={route.path}>
                         {route.name}
                     </Link>
